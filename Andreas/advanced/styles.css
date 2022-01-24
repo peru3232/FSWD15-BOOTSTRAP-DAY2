@@ -1,0 +1,12 @@
+.image {
+  width: 35vw !important;
+  height: 45vw !important;
+}
+
+img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=styles.css.map */

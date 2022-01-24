@@ -4,6 +4,7 @@
 }
 
 body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fae1d2), to(rgba(159, 165, 255, 0.7)));
   background-image: linear-gradient(#fae1d2, rgba(159, 165, 255, 0.7));
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
@@ -28,22 +29,34 @@ nav {
   background: url(../images/25896-full-size-natur-hintergrundbider-1920x1080.jpg);
   background-position: bottom;
 }
+
 nav ul {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
+
 nav li {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100px;
   height: 40px;
   margin: 2px 0;
   background: rgba(114, 196, 243, 0);
+  -webkit-transition: font-size 300ms, background 500ms;
   transition: font-size 300ms, background 500ms;
 }
+
 nav li:hover {
   background: rgba(149, 216, 255, 0.5);
   font-size: large;
@@ -53,6 +66,7 @@ nav li:hover {
   display: block;
   list-style: none;
 }
+
 .menu:hover .hovermenu {
   opacity: 0.95;
 }
@@ -61,16 +75,20 @@ nav li:hover {
   display: block;
   background-color: #f1f1f1;
   min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
 }
+
 .hovermenu a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
+
 .hovermenu a:hover {
   background-color: #995151;
 }
@@ -89,6 +107,7 @@ footer {
 a {
   text-decoration: none;
 }
+
 a:hover {
   color: #88b323;
 }
@@ -120,48 +139,57 @@ a:active {
   body {
     background-color: darksalmon;
   }
-
   .gridcontainer {
     width: 950px;
     height: 950px;
     gap: 50px;
   }
 }
+
 @media screen and (max-width: 1080px) {
   body {
     background-color: deepskyblue;
   }
-
   .gridcontainer {
     width: 570px;
     height: 570px;
     gap: 30px;
   }
 }
+
 @media screen and (max-width: 600px) {
   body {
     background-color: lightgreen;
   }
-
   .gridcontainer {
     width: 380px;
     height: 380px;
     gap: 20px;
   }
 }
+
 .gridcontainer {
   position: relative;
   top: 150px;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
-  grid-template: repeat(8, 1fr)/repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[8];
+  -ms-grid-columns: (1fr)[8];
+      grid-template: repeat(8, 1fr)/repeat(8, 1fr);
 }
 
 .griditem {
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #00ff0d;
   font-weight: bolder;
   font-size: x-large;
@@ -170,22 +198,25 @@ a:active {
 /* Picture Galerie dimensions and positiones */
 .giall {
   background-size: cover;
-  grid-area: span 2/span 2;
+  grid-area: span 2 / span 2;
 }
+
 .giall p {
   opacity: 0.1;
+  -webkit-transition: opacity 800ms ease;
   transition: opacity 800ms ease;
 }
+
 .giall:hover p {
   opacity: 1;
 }
 
 .no1, .no5, .no6 {
-  grid-area: span 2/span 4;
+  grid-area: span 2 / span 4;
 }
 
 .no2 {
-  grid-area: span 4/span 4;
+  grid-area: span 4/ span 4;
 }
 
 /* linked Pictures */
@@ -211,4 +242,5 @@ a:active {
 
 .no6 {
   background-image: url(../images/25884-natur-hintergrundbider-1920x1200-fuer-meizu.jpg);
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */
